@@ -1,0 +1,35 @@
+name: Improvement proposal
+description: Suggest a bounded improvement to capability, comfort, or evidence.
+title: "[Proposal]: "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Human problem
+      description: Who is losing time, confidence, comfort, or capability today?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Observable outcome
+      description: What would become easier or more trustworthy?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or example
+      description: Link a story/artifact or give a concrete scenario. A design is optional.
+    validations:
+      required: true
+  - type: dropdown
+    id: depth
+    attributes:
+      label: Likely Lab depth
+      options:
+        - LIGHT — bounded delivery
+        - FULL — material uncertainty or competing designs
+    validations:
+      required: true

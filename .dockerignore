@@ -1,0 +1,13 @@
+.git
+.venv
+__pycache__
+*.pyc
+.pytest_cache
+.ruff_cache
+.hypothesis
+.env
+.env.*
+.lab
+archive
+dist
+site

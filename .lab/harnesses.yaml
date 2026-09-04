@@ -1,0 +1,23 @@
+version: 1
+active: codex
+profiles:
+  codex:
+    label: Codex CLI
+    kind: codex
+    executable: codex
+    model:
+  claude:
+    label: Claude Code
+    kind: claude
+    executable: claude
+    model:
+  opencode:
+    label: OpenCode
+    kind: opencode
+    executable: opencode
+    model:
+  ollama:
+    label: Ollama · local
+    kind: ollama
+    endpoint: http://localhost:11434/api/generate
+    model: gemma3

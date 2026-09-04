@@ -1,0 +1,23 @@
+id: US-003
+title: Make Catfish Lab portable, observable, and evidence-first
+stage: proposals
+lab_depth: full
+created_at: '2026-09-03T12:49:37.788052Z'
+updated_at: '2026-09-03T13:23:24.030841Z'
+human:
+  experiment_approved: false
+  implementation_approved: false
+  done_approved: false
+artifacts:
+  story: true
+  hypothesis: true
+  candidate_a: true
+  candidate_b: true
+  critiques: false
+  experiment: false
+  evidence: false
+  decision: false
+  implementation: false
+  redteam: false
+  trial: false
+  archive: false

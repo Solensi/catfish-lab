@@ -1,0 +1,54 @@
+site_name: Catfish Lab Handbook
+site_description: Evidence-driven project work without the process pageant.
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.suggest
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: cyan
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: teal
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+nav:
+  - Home: README.md
+  - Start:
+      - Five-minute guide: lab/quickstart.md
+      - Six-minute presentation: presentation.md
+      - Why Catfish exists: lab/why.md
+      - Operator guide: lab/operator-guide.md
+      - The Logbook: lab/logbook.md
+      - Put Catfish on GitHub: repository-launch.md
+  - Understand:
+      - Roles and workflow: lab/roles-and-workflow.md
+      - Evidence and integrity: lab/evidence.md
+      - Architecture: lab/architecture.md
+  - Connect:
+      - Harness selection: lab/harnesses.md
+      - Harness proxy: lab/harness-proxy.md
+      - Model adapters: lab/adapters.md
+  - Reference:
+      - CLI: lab/cli-reference.md
+      - Improvement chart: design/improvement-chart.md
+      - Persona reduction review: design/persona-review.md
+      - Project root decision: adr/0001-project-root.md

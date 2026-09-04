@@ -1,0 +1,312 @@
+Screen {
+    background: #0b1114;
+    color: #dce7e9;
+}
+
+#brand {
+    height: 4;
+    padding: 1 2;
+    background: #10252a;
+    color: #78e0d0;
+    border-bottom: solid #2a5559;
+}
+
+#workspace {
+    height: 1fr;
+}
+
+#story-pane {
+    width: 30%;
+    min-width: 24;
+    max-width: 38;
+    padding: 1;
+    background: #0e181c;
+    border-right: solid #243a3f;
+}
+
+.pane-title {
+    height: 2;
+    text-style: bold;
+    color: #f2b84b;
+    padding-left: 1;
+}
+
+#story-list {
+    height: 1fr;
+    background: transparent;
+}
+
+StoryItem {
+    height: 4;
+    padding: 1;
+    color: #9eb2b6;
+}
+
+StoryItem:hover {
+    background: #15262b;
+}
+
+StoryItem.-highlight {
+    background: #17343a;
+    color: #f4fbfa;
+    border-left: thick #5bd3c2;
+}
+
+#case-pane {
+    width: 1fr;
+    padding: 0 2;
+}
+
+.case-pane-title {
+    color: #91a9ad;
+}
+
+#case-scroll {
+    height: 1fr;
+    padding: 1 2;
+    scrollbar-color: #3c7779;
+    scrollbar-background: #101a1e;
+    border-left: solid #0b1114;
+}
+
+#case-scroll:focus {
+    background: #0d171b;
+    border-left: solid #5bd3c2;
+}
+
+#case {
+    height: auto;
+}
+
+#situation {
+    height: 3;
+    padding: 1 2;
+    background: #142127;
+    color: #f2c66d;
+    border-top: solid #2d454b;
+}
+
+#situation.delayed {
+    color: #ff9e80;
+    border-top: solid #a94f45;
+}
+
+Footer {
+    background: #091014;
+    color: #b8c8ca;
+}
+
+FooterLabel,
+Footer .footer-key--key,
+Footer .footer-key--description {
+    background: #091014;
+}
+
+Footer .footer-key--key {
+    color: #f2b84b;
+    text-style: bold;
+}
+
+Footer .footer-key--description {
+    color: #91a9ad;
+}
+
+Input {
+    background: #0d171b;
+    color: #f4fbfa;
+    border: tall #29454b;
+}
+
+Input:focus {
+    background: #102126;
+    border: tall #5bd3c2;
+}
+
+Input > .input--cursor {
+    background: #5bd3c2;
+    color: #071012;
+}
+
+Input > .input--selection {
+    background: #275b5b;
+}
+
+Checkbox {
+    background: transparent;
+    color: #aec0c3;
+    border: tall #29454b;
+}
+
+Checkbox > .toggle--button,
+Checkbox.-on > .toggle--button {
+    background: #102126;
+    color: #5bd3c2;
+}
+
+Checkbox:focus {
+    background: #102126;
+    border: tall #5bd3c2;
+}
+
+Checkbox:focus > .toggle--label {
+    background: #17343a;
+    color: #f4fbfa;
+}
+
+Button.-style-default {
+    background: #17282d;
+    color: #dce7e9;
+    border-top: tall #315159;
+    border-bottom: tall #0a1316;
+}
+
+Button.-style-default:hover,
+Button.-style-default:focus {
+    background: #204047;
+    color: #ffffff;
+    border-top: tall #5bd3c2;
+    border-bottom: tall #132a2f;
+}
+
+Button.-style-default.-primary {
+    background: #21645f;
+    color: #f4fbfa;
+    border-top: tall #5bd3c2;
+    border-bottom: tall #123b39;
+}
+
+Button.-style-default.-primary:hover,
+Button.-style-default.-primary:focus {
+    background: #2a7a72;
+    border-top: tall #8ce8da;
+}
+
+Button.-style-default.-success {
+    background: #80601f;
+    color: #fff2cf;
+    border-top: tall #f2b84b;
+    border-bottom: tall #4c3810;
+}
+
+Button.-style-default.-success:hover,
+Button.-style-default.-success:focus {
+    background: #a17828;
+    border-top: tall #ffd47c;
+}
+
+ModalScreen {
+    align: center middle;
+    background: #000000 55%;
+}
+
+.dialog {
+    width: 64;
+    height: auto;
+    max-height: 85%;
+    padding: 1 2;
+    background: #122127;
+    border: solid #4ba89d;
+}
+
+.advance-dialog {
+    width: 78;
+    max-width: 94%;
+    border: double #f2b84b;
+}
+
+.feedback-dialog {
+    width: 72;
+    max-width: 92%;
+    border: double #f2b84b;
+}
+
+.tutorial-dialog {
+    width: 74;
+    max-width: 92%;
+    min-height: 20;
+    border: double #5bd3c2;
+}
+
+.gate-question {
+    height: auto;
+    margin: 1 0;
+    color: #f4fbfa;
+    text-style: bold;
+}
+
+.dialog-title {
+    height: 2;
+    text-style: bold;
+    color: #77dfcf;
+}
+
+.dialog-copy {
+    height: auto;
+    color: #aec0c3;
+    margin-bottom: 1;
+}
+
+.dialog-actions {
+    height: 3;
+    align-horizontal: right;
+    margin-top: 1;
+}
+
+.dialog-actions Button {
+    margin-left: 1;
+}
+
+.advance-actions {
+    height: 4;
+}
+
+.harness-choice {
+    width: 100%;
+    margin-bottom: 1;
+    text-align: left;
+}
+
+.reading {
+    width: 80%;
+    height: 85%;
+    padding: 1 2;
+    background: #101d22;
+    border: solid #3d7773;
+}
+
+.reading-scroll {
+    height: 1fr;
+    padding: 0 1;
+}
+
+.reading-copy {
+    height: auto;
+}
+
+.case-files {
+    width: 90%;
+    height: 90%;
+    border: double #f2b84b;
+}
+
+#case-file-list {
+    height: 1fr;
+    margin-bottom: 1;
+    background: #0d171b;
+}
+
+CaseFileItem {
+    height: 4;
+    padding: 1;
+    color: #9eb2b6;
+}
+
+CaseFileItem:hover {
+    background: #15262b;
+}
+
+CaseFileItem.-highlight {
+    background: #27332e;
+    color: #f4fbfa;
+    border-left: thick #f2b84b;
+}

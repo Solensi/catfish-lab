@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Catfish Lab decision","type":"object","required":["story_id","approved_by_human"]}

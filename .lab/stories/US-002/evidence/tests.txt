@@ -1,0 +1,21 @@
+US-002 final remediation gate
+
+ruff check: PASS
+ruff format --check: PASS
+lab doctor: PASS
+pytest: 44 passed in 0.87s
+seeded portrait SHA-256: PASS
+
+Pinned runtime smoke test: PASS
+- command: `env -u OPENAI_API_KEY -u AZURE_OPENAI_API_KEY -u ANTHROPIC_API_KEY .venv/bin/python -m catfish.main`
+- HTTP: `HEAD /` returned 200 OK from the local Flet/Uvicorn server
+- startup: application startup completed
+- shutdown: application shutdown completed cleanly
+- assets: configured local assets directory exists and is accepted by Flet
+- live AI independence: common AI API-key variables were explicitly absent
+
+Visual browser automation: UNTESTED
+- reason: no in-app or extension browser was connected to the browser-control surface
+- impact: automated screenshot and click-through evidence is not claimed
+
+The command output contains no recovery answer values.

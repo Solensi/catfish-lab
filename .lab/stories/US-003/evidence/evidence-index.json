@@ -1,0 +1,187 @@
+{
+  "artifacts": [
+    {
+      "bytes": 841,
+      "path": ".lab/stories/US-003/README.md",
+      "sha256": "sha256:e98c1da1af9958e104cdc22614e0c16203548f0c592e5853dd6391316c9cd3f1"
+    },
+    {
+      "bytes": 7441,
+      "path": ".lab/stories/US-003/candidates/A.md",
+      "sha256": "sha256:2143991180bbec451a7007785dfa9b8d89d13a3215b9922bf877ec0d412b8a0d"
+    },
+    {
+      "bytes": 7935,
+      "path": ".lab/stories/US-003/candidates/B.md",
+      "sha256": "sha256:bf63fc0db13ba265149710540febd1dff70065a2bb09c81a8afe6f804d290b63"
+    },
+    {
+      "bytes": 2234,
+      "path": ".lab/stories/US-003/evidence/demo-functionality.md",
+      "sha256": "sha256:3325b77a91c21e6f655c805f2812eda770af32a51fedf141891ecb054f512f43"
+    },
+    {
+      "bytes": 2747,
+      "path": ".lab/stories/US-003/evidence/human-readable-docker-workflow.md",
+      "sha256": "sha256:138313d807782b9d59ca5b2fc158cda8f0977125df7a3c750740b4f0f25b9e5d"
+    },
+    {
+      "bytes": 2635,
+      "path": ".lab/stories/US-003/evidence/interactive-documentation.md",
+      "sha256": "sha256:7f5e6a90eb62209daf6b7c26e822b895d3908aa2cc441f8f3751d5aa1a8b0b89"
+    },
+    {
+      "bytes": 1697,
+      "path": ".lab/stories/US-003/evidence/logbook-redesign.md",
+      "sha256": "sha256:1d81cafd397056bf0ec46d81417f3fea939bc5910712c79be3dd44cbd7ff84a3"
+    },
+    {
+      "bytes": 987,
+      "path": ".lab/stories/US-003/evidence/verification.md",
+      "sha256": "sha256:9cff077778ee5d0af5c0274334044cc26729d23fb4ac53ed3f3db0c79ea440cb"
+    },
+    {
+      "bytes": 4553,
+      "path": ".lab/stories/US-003/hypothesis.md",
+      "sha256": "sha256:40327418cda3927c090c80bad4a8e874eb95d6b9f9be9058df4c0fc72d099a5d"
+    },
+    {
+      "bytes": 3494,
+      "path": ".lab/stories/US-003/story.md",
+      "sha256": "sha256:18c070700b2f7f7e7697f03c3ad6d4c051d45312cea1dd1ca78d989e47b0e974"
+    },
+    {
+      "bytes": 517,
+      "path": ".lab/stories/US-003/story.yaml",
+      "sha256": "sha256:a3b7582668b1a7c97bc79ba1180f72cf711a185de5a69569c4ac8f1b182d4270"
+    }
+  ],
+  "events": [
+    {
+      "event": "story_created",
+      "event_id": "evt_732936c1411441e1b8d231fca46329f7",
+      "lab_depth": "full",
+      "previous_hash": "09a2d4f33a832cc72a2f1a7557d510ccb4199c709e517b7f81b5b93e86a8b6df",
+      "record_hash": "0560947e33cedb66293708567065be2d2dad162ecc208018216b5a74d9d8b0e7",
+      "recorded_at": "2026-09-03T12:49:37.791003+00:00",
+      "role": "human",
+      "sequence": 18,
+      "status": "success",
+      "story_id": "US-003",
+      "title": "Make Catfish Lab portable, observable, and evidence-first"
+    },
+    {
+      "completed_at": "2026-09-03T13:17:50.159751+00:00",
+      "event_id": "evt_4762f1ec6e8b442d94cb8e643f643898",
+      "model_id": "codex-default",
+      "output_artifact": ".lab/stories/US-003/hypothesis.md",
+      "output_sha256": "sha256:40327418cda3927c090c80bad4a8e874eb95d6b9f9be9058df4c0fc72d099a5d",
+      "previous_hash": "0560947e33cedb66293708567065be2d2dad162ecc208018216b5a74d9d8b0e7",
+      "prompt_sha256": "sha256:ae097676b29bfbc3874a258a9c60d0bb18383ff8f3d7d09bb251a8298e0524bb",
+      "record_hash": "454bf9378d9ac297338fd95454d7dcf1abf1a706ce802e3c1bf50ba2cfcfba4d",
+      "recorded_at": "2026-09-03T13:17:50.162303+00:00",
+      "role": "scientist",
+      "run_id": "run_20260903T131724_b87459a0",
+      "sequence": 19,
+      "status": "success",
+      "story_id": "US-003"
+    },
+    {
+      "completed_at": "2026-09-03T13:19:37.252675+00:00",
+      "event_id": "evt_3d075beb46dd42e1bce9b94bf8ea01c4",
+      "model_id": "codex-default",
+      "output_artifact": ".lab/stories/US-003/candidates/A.md",
+      "output_sha256": "sha256:78e30785527f4936fe46cd75eb5a11e8c76e8686c03bb3eb1889724cb254df24",
+      "previous_hash": "454bf9378d9ac297338fd95454d7dcf1abf1a706ce802e3c1bf50ba2cfcfba4d",
+      "prompt_sha256": "sha256:3147e79d60c325fe833802be6094915ce25e1dee1d046eea227e5c1f8196a95e",
+      "record_hash": "c65177613bce8681eef3158bd71cb47df05367b223ce06fb6a1b9acbdc6ca22a",
+      "recorded_at": "2026-09-03T13:19:37.256692+00:00",
+      "role": "architect",
+      "run_id": "run_20260903T131804_db444240",
+      "sequence": 20,
+      "status": "success",
+      "story_id": "US-003"
+    },
+    {
+      "completed_at": "2026-09-03T13:20:23.483709+00:00",
+      "event_id": "evt_ae6c08c942b141919ea09ac07bd6a019",
+      "model_id": "codex-default",
+      "output_artifact": ".lab/stories/US-003/candidates/B.md",
+      "output_sha256": "sha256:3b927354d6499f9f7fb932bca6e23fcc0c4a815ec58056aa2c9b3cd45123bded",
+      "previous_hash": "c65177613bce8681eef3158bd71cb47df05367b223ce06fb6a1b9acbdc6ca22a",
+      "prompt_sha256": "sha256:76c6fedf6a498313733de65b8a031d89e7d11989e1538723b1e143e3b2ae9929",
+      "record_hash": "a21dcc1ec7604ecccb4c55b0626e0c08a632c64aa62c7732c22cc20fa74bae21",
+      "recorded_at": "2026-09-03T13:20:23.488533+00:00",
+      "role": "heretic",
+      "run_id": "run_20260903T131946_70478c61",
+      "sequence": 21,
+      "status": "success",
+      "story_id": "US-003"
+    },
+    {
+      "completed_at": "2026-09-03T13:22:21.775488+00:00",
+      "event_id": "evt_1a7976ad9b73424c9089313b40d7c823",
+      "model_id": "codex-default",
+      "output_artifact": ".lab/stories/US-003/candidates/A.md",
+      "output_sha256": "sha256:2143991180bbec451a7007785dfa9b8d89d13a3215b9922bf877ec0d412b8a0d",
+      "previous_hash": "a21dcc1ec7604ecccb4c55b0626e0c08a632c64aa62c7732c22cc20fa74bae21",
+      "prompt_sha256": "sha256:faa149d5b593d903b7d8453b51d78aab942bc9da08d5b0b2bdadcc5dd281681d",
+      "record_hash": "8652fc9bb2f3d58965f458ff741efbeea82d1cd8716f8dcea4e65e671ed80e2d",
+      "recorded_at": "2026-09-03T13:22:21.782582+00:00",
+      "role": "architect",
+      "run_id": "run_20260903T132143_0c5337d2",
+      "sequence": 22,
+      "status": "success",
+      "story_id": "US-003"
+    },
+    {
+      "completed_at": "2026-09-03T13:23:24.030841+00:00",
+      "event_id": "evt_4b1659d037294f53b666be7bbe1194fc",
+      "model_id": "codex-default",
+      "output_artifact": ".lab/stories/US-003/candidates/B.md",
+      "output_sha256": "sha256:bf63fc0db13ba265149710540febd1dff70065a2bb09c81a8afe6f804d290b63",
+      "previous_hash": "8652fc9bb2f3d58965f458ff741efbeea82d1cd8716f8dcea4e65e671ed80e2d",
+      "prompt_sha256": "sha256:b70a0a4cc10357da510f4b6fe2b04e363acef7901d136c6d8ea370d6fd699156",
+      "record_hash": "cef9e8f37a2c4ed04ddf5d72e80f1dcb7d554d5edd3cf839989f14f6f8cceea3",
+      "recorded_at": "2026-09-03T13:23:24.038000+00:00",
+      "role": "heretic",
+      "run_id": "run_20260903T132242_9e361e81",
+      "sequence": 23,
+      "status": "success",
+      "story_id": "US-003"
+    }
+  ],
+  "generated_at": "2026-09-03T13:44:00.366192+00:00",
+  "ledger_integrity": {
+    "event_count": 6,
+    "verified": true
+  },
+  "schema_version": 1,
+  "story": {
+    "artifacts": {
+      "archive": false,
+      "candidate_a": true,
+      "candidate_b": true,
+      "critiques": false,
+      "decision": false,
+      "evidence": false,
+      "experiment": false,
+      "hypothesis": true,
+      "implementation": false,
+      "redteam": false,
+      "story": true,
+      "trial": false
+    },
+    "created_at": "2026-09-03T12:49:37.788052Z",
+    "human": {
+      "done_approved": false,
+      "experiment_approved": false,
+      "implementation_approved": false
+    },
+    "id": "US-003",
+    "lab_depth": "full",
+    "stage": "proposals",
+    "title": "Make Catfish Lab portable, observable, and evidence-first",
+    "updated_at": "2026-09-03T13:23:24.030841Z"
+  }
+}

@@ -1,0 +1,23 @@
+id: US-006
+title: Give the Logbook a memorable poster identity
+stage: trial
+lab_depth: light
+created_at: '2026-09-03T19:11:05.337495Z'
+updated_at: '2026-09-04T04:12:05.013039Z'
+human:
+  experiment_approved: false
+  implementation_approved: true
+  done_approved: false
+artifacts:
+  story: true
+  hypothesis: false
+  candidate_a: false
+  candidate_b: false
+  critiques: false
+  experiment: false
+  evidence: false
+  decision: false
+  implementation: true
+  redteam: true
+  trial: true
+  archive: false

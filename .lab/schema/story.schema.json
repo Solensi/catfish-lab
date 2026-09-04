@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Catfish Lab story","type":"object","required":["id","title","stage","human","artifacts"]}

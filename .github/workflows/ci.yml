@@ -1,0 +1,40 @@
+name: Lab quality gate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lab:
+    strategy:
+      matrix:
+        python: ["3.11", "3.13"]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: ${{ matrix.python }}
+          enable-cache: true
+      - run: uv sync --locked --extra docs --group dev
+      - run: uv run ruff check .
+      - run: uv run pytest tests/test_lab_*.py
+      - run: uv run lab doctor
+      - run: uv run lab logbook --snapshot
+      - run: uv run lab tutorial --snapshot
+      - run: uv run lab docs --build
+      - run: uv build
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker compose config
+      - run: docker build --tag catfish-lab:test .
+      - run: docker run --rm --volume "${{ github.workspace }}:/workspace" catfish-lab:test doctor
+      - run: >-
+          docker run --rm --volume "${{ github.workspace }}:/workspace"
+          catfish-lab:test logbook --snapshot

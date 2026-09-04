@@ -1,0 +1,60 @@
+version: 1
+paths:
+  project_spec:
+    - .lab/project.md
+context:
+  include_globs:
+    - src/**/*
+    - app/**/*
+    - lib/**/*
+    - packages/**/*
+    - lab/**/*
+    - tests/**/*
+    - docs/**/*
+    - .github/**/*
+    - "*.py"
+    - "*.js"
+    - "*.ts"
+    - "*.tsx"
+    - "*.rs"
+    - "*.go"
+    - "*.java"
+    - "*.md"
+    - "*.toml"
+    - "*.yaml"
+    - "*.yml"
+    - package.json
+    - Cargo.toml
+    - go.mod
+    - Dockerfile
+    - compose.yaml
+  max_bytes: 1000000
+security:
+  deny_globs:
+    - .env
+    - .env.*
+    - "**/.env"
+    - "**/.env.*"
+    - "**/*secret*"
+    - "**/*credential*"
+    - ".git/**"
+    - ".venv/**"
+    - "venv/**"
+    - "node_modules/**"
+    - "target/**"
+    - "dist/**"
+    - "build/**"
+    - "site/**"
+  redact_environment: true
+runs:
+  require_fresh_session: true
+  record_prompt_hash: true
+  record_context_hashes: true
+  save_full_prompts: false
+human_gate:
+  required_before_builder: true
+  required_before_done: true
+artifacts:
+  story_prefix: US
+  experiment_prefix: EXP
+  decision_prefix: DEC

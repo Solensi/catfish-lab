@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","title":"Catfish Lab run record","type":"object","required":["run_id","role","story_id","status","isolation"]}

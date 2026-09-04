@@ -1,0 +1,43 @@
+name: Reproducible defect
+description: Report behavior that conflicts with an observable Catfish Lab contract.
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping make the Lab more honest. Never paste secrets or private prompts.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Expected outcome
+      description: What observable result should have occurred?
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: What happened instead, including the smallest reproduction?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include relevant story ID, artifact path, and redacted `lab doctor` output.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, terminal, Python or Docker version, and installation route.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed secrets, credentials, and private prompt content.
+          required: true
