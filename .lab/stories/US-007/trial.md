@@ -6,56 +6,57 @@ Story: US-007
 
 Verdict: PASS
 
-Evidence: the Logbook labels the pane route; Tab or Right focuses `CaseScroll`, `j`/`k` and arrows
-scroll it, and Left returns to `StoryList`. A headless test verifies positive scroll position and an
-unchanged active story.
+Evidence: Tab or Right focuses `CaseScroll`, `j`/`k` and arrows scroll it, and Left returns to the
+story rail. Headless coverage verifies the scroll position and unchanged active story.
 
-## Acceptance Criterion 2 — rejecting an assessment requires a reason
-
-Verdict: PASS
-
-Evidence: final Advance exposes **Send back [r]**, which opens a focused feedback prompt. Both the
-controller and UI refuse empty feedback. The CLI equivalent requires `--reason`.
-
-## Acceptance Criterion 3 — feedback reaches remediation rather than disappearing
+## Acceptance Criterion 2 — rejecting an assessment produces actionable evidence
 
 Verdict: PASS
 
-Evidence: rejection writes a hashed `evidence/human-feedback-*.md`, preserves superseded work,
-resets its claims, and makes the next action `lab run builder STORY --harness`. `lab inbox --json`
-exposes the feedback reason and artifact path, and the Builder can read that feedback document.
+Evidence: final Advance exposes **Send back [r]** and refuses empty feedback. Rejection seals a
+hashed human-feedback artifact, preserves superseded work, queues Builder remediation, exposes the
+reason through the inbox, and narrates it as a human decision in Live Analysis.
 
-## Acceptance Criterion 4 — evidence narration remains attributable
-
-Verdict: PASS
-
-Evidence: Live Analysis attributes `assessment_rejected` to the human, quotes the reason, and checks
-the feedback artifact's recorded SHA-256. Case files discovers feedback and superseded artifacts.
-
-## Acceptance Criterion 5 — the public product is one comprehensible Lab
+## Acceptance Criterion 3 — the Logbook remains reliable and inspectable
 
 Verdict: PASS
 
-Evidence: the staged repository excludes the unrelated game prototype and 2.1 MB demo image without
-deleting the local history. README, architecture, contribution, harness, and improvement-chart copy
-now describe one Lab-only clone. Catfish no longer globally denies a host project's own `archive/`
-path, and a regression test proves an explicitly included archive document reaches technical roles.
+Evidence: role numbers, stable story selection, case-file paths, gate evidence, scrollable readers,
+provider delays, and first-cast pacing have regression coverage. Periodic refresh now tolerates the
+specific `NoMatches` race produced by screen transition or teardown; the affected interaction and
+new guard passed five repeated targeted runs before the full 72-test suite passed.
 
-## Acceptance Criterion 6 — setup and release checks are reproducible
+## Acceptance Criterion 4 — the public product is one comprehensible Lab
 
 Verdict: PASS
 
-Evidence: the launch guide covers official Arch GitHub CLI, Docker, Compose, and Buildx packages;
-native and container verification; local Git identity; authentication; push; and Actions. The
-Dockerfile pins Python and uv image digests and enforces `uv.lock`. Ruff, 71 tests, doctor, strict
-MkDocs, source/wheel builds, Buildx, container doctor, and container Logbook checks pass.
+Evidence: the GitHub repository excludes unrelated game history and the large demo image without
+deleting local files. README, architecture, contribution, harness, and improvement-chart copy
+describe one Lab-only clone. An attached project may opt its own `archive/` path into role context.
+
+## Acceptance Criterion 5 — setup and release checks are reproducible
+
+Verdict: PASS
+
+Evidence: the guide covers official Arch GitHub CLI, Docker, Compose, and Buildx packages, native
+and container proof, Git identity, authentication, push, and Actions. Docker pins Python and uv image
+digests and enforces `uv.lock`. Packages exclude local history and live Lab state.
+
+## Acceptance Criterion 6 — the release exists and its quality gate passes
+
+Verdict: PASS
+
+Evidence: public commit `8a4422e` is the `main` branch of `Solensi/catfish-lab`. GitHub Actions run
+`33874097926` passed Python 3.11, Python 3.13, Docker build, container doctor, container Logbook,
+tutorial, strict docs, and package builds. Its Node 20 annotations are remediated by SHA-pinned,
+Node 24-compatible checkout v7 and setup-uv v10.0.1 actions.
 
 ## Red Team Findings
 
-No requested defect was reproduced. Live release testing exposed and resolved the missing Buildx
-plugin, ignored lockfile, mutable image inputs, oversized unrelated initial history, and a residual
-product-specific context denial. Remaining uncertainty is bounded to human visual review,
-unavailable host/provider combinations, and GitHub Actions, which cannot run before push.
+The final verification cycle reproduced one intermittent timer/DOM transition fault; the refresh
+boundary now skips only that specific missing-widget repaint and preserves every other exception.
+No requested defect remains reproduced. Uncertainty is limited to human presentation review and
+host/provider combinations unavailable in this environment.
 
 ## Overall Verdict
 
@@ -64,5 +65,4 @@ READY
 ## Missing Evidence
 
 - Human visual review on the presentation terminal.
-- Authenticated push and the first GitHub Actions result.
 - Live Windows, macOS, Claude, OpenCode provider, and Ollama checks.

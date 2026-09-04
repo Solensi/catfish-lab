@@ -15,12 +15,13 @@ Ledger integrity: **verified**
 - `.lab/stories/US-007/evidence/trial-20260904T122752167321Z.md` — `sha256:94faa78d767339da17447b126fa47baa0badd8b6b4c904dce6ce9cf4f57a3654` (2852 bytes)
 - `.lab/stories/US-007/evidence/trial-20260904T123235026357Z.md` — `sha256:90ba704f2de3defa06d9661bc979f39ba3bc6d45912bf5aa6b5fa581190c5c23` (2985 bytes)
 - `.lab/stories/US-007/evidence/trial-20260904T123654222616Z.md` — `sha256:5c75967886f21e5a3d3750a19d206885101f00e4762f4194f3bdf6ed4e494c3a` (3061 bytes)
-- `.lab/stories/US-007/implementation.md` — `sha256:3aff96f34fbdd9fc7590c6707b3a28d23af3e4e1f9103127e913b40892edffdd` (9781 bytes)
-- `.lab/stories/US-007/redteam.md` — `sha256:8b484c196560611cd772aea3d1bc89941221cdfdaab471d90faa783a75c74115` (2072 bytes)
+- `.lab/stories/US-007/evidence/trial-20260904T124322978835Z.md` — `sha256:a9542aaeb79a4a11f879bfec378a1833da288a453db14a5731bd83700fb7038e` (2880 bytes)
+- `.lab/stories/US-007/implementation.md` — `sha256:d4a4ccb381cbb86d7426aaf3b4b52794d88b1ac945bfa66976cbf3d43f8ea5e3` (10732 bytes)
+- `.lab/stories/US-007/redteam.md` — `sha256:904b07f75e04ba32fe4544e8929bb5685f793c2229fbce61a3e7b0fc5c36ff66` (1997 bytes)
 - `.lab/stories/US-007/request.md` — `sha256:10f946ba2623a648461ee9a09efd9d2958bd46fb793d5b3f38f29b1428b44520` (539 bytes)
 - `.lab/stories/US-007/story.md` — `sha256:7f8657873121532480da0541fcc63f748db824aada6cff7e6f548418b0062a50` (2010 bytes)
-- `.lab/stories/US-007/story.yaml` — `sha256:c343a2044ef44d94d3a0f9ec439030656be11ee84d68793204a6b24f35dcb214` (580 bytes)
-- `.lab/stories/US-007/trial.md` — `sha256:a9542aaeb79a4a11f879bfec378a1833da288a453db14a5731bd83700fb7038e` (2880 bytes)
+- `.lab/stories/US-007/story.yaml` — `sha256:7b14ef549225b878a3b91d1f0510e6f38bf7a1824eb7eb3752d8fac182b74407` (580 bytes)
+- `.lab/stories/US-007/trial.md` — `sha256:29d20ee97666855397376c589c469501b2742774100b3fca620035d850a51371` (2904 bytes)
 
 ## Recorded events
 
@@ -57,3 +58,6 @@ Ledger integrity: **verified**
 - 2026-09-04T12:36:54.225696+00:00: controller / reopened
 - 2026-09-04T12:40:53.586454+00:00: redteam / success
 - 2026-09-04T12:40:54.009688+00:00: judge / success
+- 2026-09-04T12:43:22.982109+00:00: controller / reopened
+- 2026-09-04T12:46:12.669048+00:00: redteam / success
+- 2026-09-04T12:46:13.126670+00:00: judge / success

@@ -10,6 +10,7 @@ from rich.markdown import Markdown as RichMarkdown
 from textual.app import App, ComposeResult
 from textual.binding import Binding
 from textual.containers import Horizontal, Vertical, VerticalScroll
+from textual.css.query import NoMatches
 from textual.screen import ModalScreen
 from textual.widgets import (
     Button,
@@ -822,7 +823,12 @@ class CatfishLogbook(App[str | None]):
             self._situation_content = situation
 
     async def refresh_lab(self) -> None:
-        await self._sync_story_list()
+        try:
+            await self._sync_story_list()
+        except NoMatches:
+            # A timer tick may overlap a modal transition or application teardown.
+            # The next tick will repaint; there is no useful state to mutate here.
+            return
 
     def _select_story(self, item: ListItem | None) -> None:
         """Make cursor movement authoritative so polling cannot fight the user."""

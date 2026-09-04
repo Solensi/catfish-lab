@@ -46,14 +46,19 @@
       "sha256": "sha256:5c75967886f21e5a3d3750a19d206885101f00e4762f4194f3bdf6ed4e494c3a"
     },
     {
-      "bytes": 9781,
-      "path": ".lab/stories/US-007/implementation.md",
-      "sha256": "sha256:3aff96f34fbdd9fc7590c6707b3a28d23af3e4e1f9103127e913b40892edffdd"
+      "bytes": 2880,
+      "path": ".lab/stories/US-007/evidence/trial-20260904T124322978835Z.md",
+      "sha256": "sha256:a9542aaeb79a4a11f879bfec378a1833da288a453db14a5731bd83700fb7038e"
     },
     {
-      "bytes": 2072,
+      "bytes": 10732,
+      "path": ".lab/stories/US-007/implementation.md",
+      "sha256": "sha256:d4a4ccb381cbb86d7426aaf3b4b52794d88b1ac945bfa66976cbf3d43f8ea5e3"
+    },
+    {
+      "bytes": 1997,
       "path": ".lab/stories/US-007/redteam.md",
-      "sha256": "sha256:8b484c196560611cd772aea3d1bc89941221cdfdaab471d90faa783a75c74115"
+      "sha256": "sha256:904b07f75e04ba32fe4544e8929bb5685f793c2229fbce61a3e7b0fc5c36ff66"
     },
     {
       "bytes": 539,
@@ -68,12 +73,12 @@
     {
       "bytes": 580,
       "path": ".lab/stories/US-007/story.yaml",
-      "sha256": "sha256:c343a2044ef44d94d3a0f9ec439030656be11ee84d68793204a6b24f35dcb214"
+      "sha256": "sha256:7b14ef549225b878a3b91d1f0510e6f38bf7a1824eb7eb3752d8fac182b74407"
     },
     {
-      "bytes": 2880,
+      "bytes": 2904,
       "path": ".lab/stories/US-007/trial.md",
-      "sha256": "sha256:a9542aaeb79a4a11f879bfec378a1833da288a453db14a5731bd83700fb7038e"
+      "sha256": "sha256:29d20ee97666855397376c589c469501b2742774100b3fca620035d850a51371"
     }
   ],
   "events": [
@@ -578,11 +583,58 @@
       "sequence": 83,
       "status": "success",
       "story_id": "US-007"
+    },
+    {
+      "artifact": ".lab/stories/US-007/evidence/trial-20260904T124322978835Z.md",
+      "artifact_sha256": "sha256:a9542aaeb79a4a11f879bfec378a1833da288a453db14a5731bd83700fb7038e",
+      "event_id": "evt_1cb870aa7e2148db9a9436b49f94921d",
+      "previous_hash": "affee9b2ebfa59d10fb6b1874ce6eb3fa7e3a2e230f4b923617f0e49d2ab8749",
+      "reason": "The first public quality gate passed but reported Node 20 deprecations; pin the maintainers' current Node 24 action releases and refresh release evidence.",
+      "record_hash": "9f814c8540cfae767cfbf52523eef0c8cfe898da1d2d5a2d8371e898f371a820",
+      "recorded_at": "2026-09-04T12:43:22.982109+00:00",
+      "role": "controller",
+      "sequence": 84,
+      "stage": "trial->implementation",
+      "status": "reopened",
+      "story_id": "US-007",
+      "timestamp": "2026-09-04T12:43:22.978835+00:00"
+    },
+    {
+      "completed_at": "2026-09-04T12:46:12.660107+00:00",
+      "event_id": "evt_55f0bb1caa6c4fd6b46c0806c0b22b2a",
+      "model_id": "externally-provided",
+      "output_artifact": ".lab/stories/US-007/redteam.md",
+      "output_sha256": "sha256:904b07f75e04ba32fe4544e8929bb5685f793c2229fbce61a3e7b0fc5c36ff66",
+      "previous_hash": "9f814c8540cfae767cfbf52523eef0c8cfe898da1d2d5a2d8371e898f371a820",
+      "prompt_sha256": "sha256:74cb7528718225a234923a320fc1eda38ff1734d3f7f7cb9b7ab6297d436cfc2",
+      "record_hash": "a2b738cb5589302071ed43ab033c5b99e12cb4041fe164b551ac7eea76d7bd1c",
+      "recorded_at": "2026-09-04T12:46:12.669048+00:00",
+      "role": "redteam",
+      "run_id": "run_20260904T124612_a9ee0fa8",
+      "sequence": 85,
+      "status": "success",
+      "story_id": "US-007"
+    },
+    {
+      "completed_at": "2026-09-04T12:46:13.120918+00:00",
+      "event_id": "evt_09455a3991cf4169bd6ccc3a3820423c",
+      "model_id": "externally-provided",
+      "output_artifact": ".lab/stories/US-007/trial.md",
+      "output_sha256": "sha256:29d20ee97666855397376c589c469501b2742774100b3fca620035d850a51371",
+      "previous_hash": "a2b738cb5589302071ed43ab033c5b99e12cb4041fe164b551ac7eea76d7bd1c",
+      "prompt_sha256": "sha256:d92efcde013aae0cb7b760bc5f6bec17fd33fb9a73ebf3fb1f86cf7dfcf187dd",
+      "record_hash": "9e00cd07607f2087251f94b34ec54b9a4c0eef24cde8b04ed4c66d95271b4b7c",
+      "recorded_at": "2026-09-04T12:46:13.126670+00:00",
+      "role": "judge",
+      "run_id": "run_20260904T124613_03757aa8",
+      "sequence": 86,
+      "status": "success",
+      "story_id": "US-007"
     }
   ],
-  "generated_at": "2026-09-04T12:40:54.366342+00:00",
+  "generated_at": "2026-09-04T12:46:13.513373+00:00",
   "ledger_integrity": {
-    "event_count": 33,
+    "event_count": 36,
     "verified": true
   },
   "schema_version": 1,
@@ -611,6 +663,6 @@
     "lab_depth": "light",
     "stage": "trial",
     "title": "Prepare Catfish Lab for a public GitHub repository and a live presentation without publishing it: simplify and \u2026",
-    "updated_at": "2026-09-04T12:40:54.004881Z"
+    "updated_at": "2026-09-04T12:46:13.120918Z"
   }
 }

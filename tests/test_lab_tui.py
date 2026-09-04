@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import pytest
+from textual.css.query import NoMatches
 from textual.widgets import Input, Label
 from typer.testing import CliRunner
 
@@ -170,6 +171,21 @@ async def test_case_files_are_visible_and_openable_from_the_logbook(tmp_path: Pa
         assert "Show me where the Lab saved its work." in application.screen.content
         await pilot.press("escape")
         assert isinstance(application.screen, CaseFilesScreen)
+
+
+@pytest.mark.asyncio
+async def test_periodic_refresh_tolerates_a_screen_transition(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
+    initialize(tmp_path)
+    application = CatfishLogbook(tmp_path)
+
+    async with application.run_test(size=(100, 32)):
+        async def transitioning_screen() -> None:
+            raise NoMatches("main screen is between mount states")
+
+        monkeypatch.setattr(application, "_sync_story_list", transitioning_screen)
+        await application.refresh_lab()
 
 
 def test_files_command_lists_ready_and_waiting_case_documents(

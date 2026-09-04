@@ -120,6 +120,20 @@ always denied. That block is removed from both initialized configuration and rol
 regression test configures `archive/**/*.md` in an arbitrary host project and proves that relevant
 source can reach technical roles while security-specific denials still win.
 
+## First public CI remediation
+
+Commit `8a4422e` reached the public `Solensi/catfish-lab` repository and its first **Lab quality gate**
+passed the Python 3.11, Python 3.13, and Docker jobs. GitHub nevertheless annotated the run because
+`actions/checkout@v4` and `astral-sh/setup-uv@v6` target the retired Node 20 action runtime. The
+workflow now uses the maintainers' current Node 24-compatible releases, pinned to resolved commit
+SHAs: checkout v7 and setup-uv v10.0.1. This removes mutable major tags as well as the deprecation.
+
+That verification pass also reproduced a timer race: periodic refresh could begin on the main screen
+while it was being replaced or torn down, then raise `NoMatches` after one widget query succeeded.
+`refresh_lab` now treats that exact DOM-transition exception as a skipped repaint; other failures
+still surface. A regression test injects the transition at the timer boundary. The suite now contains
+72 passing tests.
+
 ## Patch
 
 The tool-capable outer harness applied the changes directly to the repository. The working tree and
@@ -129,7 +143,7 @@ performed those edits.
 ## Tests
 
 - `ruff check --no-cache .` — pass.
-- `pytest -q` — 71 passed.
+- `pytest -q` — 72 passed.
 - `lab doctor` — pass.
 - `mkdocs build --strict` — pass.
 - `uv build --no-build-isolation --offline` — source distribution and wheel built from cached build

@@ -2,12 +2,12 @@
 
 ## Confirmed defects
 
-None reproduced in the final staged release path.
+None remain reproduced in the final release path.
 
 ## Suspected defects
 
-None in the locally exercised release path. Provider authentication and non-Linux hosts remain
-unobserved rather than presumed successful.
+None in the locally and publicly exercised release path. Provider authentication and non-Linux
+hosts remain unobserved rather than presumed successful.
 
 ## Missing tests
 
@@ -15,7 +15,6 @@ unobserved rather than presumed successful.
 - Live provider checks for Claude Code, OpenCode, and Ollama; their deterministic subprocess
   contracts are covered, but credentials and models are deliberately not bundled.
 - Windows and macOS host checks.
-- The GitHub Actions result cannot exist until the repository has been pushed.
 
 ## Design concerns
 
@@ -23,20 +22,19 @@ unobserved rather than presumed successful.
   Presentation narration should explain that Docker contains the Lab, not the operator's
   authenticated harness.
 - Local pre-Lab history is ignored rather than deleted. This preserves the operator's files while
-  ensuring they cannot enter the initial public commit accidentally.
+  ensuring they cannot enter the public repository accidentally.
 - The final completion gate remains a human decision. Publication must not be treated as permission
   for the system to approve itself.
 
 ## Areas tested without finding a defect
 
-- Buildx 0.36.1 resolved the digest-pinned Python 3.13 and uv 0.12.9 images.
-- The Docker build executed `uv sync --locked --extra docs --no-editable`; container doctor and
-  Logbook snapshot checks passed.
-- Ruff passed; all 71 tests passed; `lab doctor` passed; MkDocs built in strict mode.
-- The context-policy regression explicitly includes `archive/**/*.md` in an arbitrary project and
-  proves it is no longer blocked by a Catfish-specific global deny.
-- Source and wheel packages built successfully. The sdist contains the launch guide, Dockerfile, and
-  OpenCode agent; the wheel contains the controller, TUI, and stylesheet; neither contains the
-  ignored prototype tree or live `.lab` state.
-- `git diff --cached --check` passed before the product-boundary changes; it must be rerun on the
-  final staged index immediately before commit.
+- Public commit `8a4422e` reached `Solensi/catfish-lab`; GitHub run `33874097926` passed Docker and
+  both Python matrix jobs.
+- The Node 20 deprecation annotations from that run are addressed with maintainer-current checkout
+  v7 and setup-uv v10.0.1 commits, each pinned to its resolved SHA.
+- The modal-transition regression and existing case-files interaction passed five consecutive
+  targeted runs. Ruff, all 72 tests, `lab doctor`, and strict MkDocs then passed together.
+- Buildx 0.36.1, the digest-pinned images, `uv sync --locked`, container doctor, container Logbook,
+  source distribution, and wheel checks passed during the release audit.
+- The staged public product excludes unrelated prototype history, credentials, generated caches,
+  and transient run records. A host project may explicitly include its own `archive/` source.
